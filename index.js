@@ -1,4 +1,4 @@
-import { API_KEY } from "./config.js";
+const API_KEY = "b930039805e75bc110c14d25aa3a7389";
 
 const input = document.getElementById("myInput");
 const btn = document.getElementById("myBtn");
@@ -42,7 +42,7 @@ async function getCity(city) {
     const response = await fetch(url, options);
     const result = await response.json();
 
-    if (result.coord === undefined) {
+    if (!result.coord) {
       alert("You are looking for a not existing city");
       return;
     }
@@ -57,7 +57,7 @@ async function getCity(city) {
 }
 
 async function getWeather(coords) {
-  if (coords === undefined) {
+  if (!coords) {
     return;
   }
 
@@ -94,12 +94,6 @@ async function getWeatherByInput() {
     const data = await getWeather(coord);
     hideLoading();
     forecast.style.visibility = "visible";
-
-    if (data === undefined) {
-      alert("ERROR;");
-
-      return;
-    }
     input.value = "";
     renderData(data);
   } catch (e) {
