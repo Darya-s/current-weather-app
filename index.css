@@ -1,0 +1,99 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#widget {
+  width: 370px;
+  height: 300px;
+  background: linear-gradient(180deg, #f5f187 0%, rgba(99, 96, 16, 0.21) 100%);
+  border-radius: 25px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: bottom;
+}
+
+#search {
+  margin-left: 20px;
+  display: flex;
+
+  position: absolute;
+}
+
+#search > button {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+}
+
+#search > button > img {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+input {
+  width: 260px;
+  height: 30px;
+  background-color: #ffffd2;
+  border: none;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+#forecastContainer {
+  position: absolute;
+  margin-top: 100px;
+}
+.forecast {
+  position: absolute;
+  width: 150px;
+
+  margin-left: 20px;
+}
+.forecast > p:first-child {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.forecast > p:nth-child(2) {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.forecast > p:nth-child(3) {
+  font-size: 1.25em;
+}
+
+.forecast > p:nth-child(4) {
+  font-size: 1.25em;
+}
+.forecast > p {
+  margin: 10px;
+}
+
+#weather {
+  margin-left: 200px;
+}
+
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #cdfafc;
+  border-top: 6px solid #1522e0;
+  border-radius: 100%;
+  margin: auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+}
+#loading.display {
+  visibility: visible;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
