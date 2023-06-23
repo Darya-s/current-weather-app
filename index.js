@@ -133,7 +133,7 @@ function renderData(data) {
   try {
     document.getElementById("city").innerHTML = `${data.name}`;
 
-    document.getElementById("temp").innerText = `${data.main.temp} °C `;
+    document.getElementById("temp").innerText = `${Math.round(data.main.temp)} °C `;
 
     document.getElementById(
       "desc"
